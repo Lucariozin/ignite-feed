@@ -1,0 +1,110 @@
+.container {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.main {
+  padding: 1rem;
+  background-color: var(--gray-700);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+
+  & > p {
+    font-size: 0.875rem;
+    line-height: 1.625rem;
+    color: var(--gray-300);
+    margin-bottom: 0.5rem;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+
+  & p {
+    font-size: 0.875rem;
+    font-weight: bold;
+    color: var(--gray-100);
+    margin-bottom: 0.1rem;
+  }
+
+  & span {
+    font-size: 0.75rem;
+    color: var(--gray-400);
+  }
+}
+
+.delete-button {
+  background-color: transparent;
+  border: none;
+  height: 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+
+  & svg line, path {
+    transition: stroke .2s;
+  }
+
+  &:hover {
+    & svg line, path {
+      stroke: var(--red-200);
+    }
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--green-200);
+  }
+}
+
+.applause-button-base {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.875rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color .2s;
+  border-radius: 4px;
+
+  & span::before {
+    content: '\2022';
+    margin: 0 4px;
+  }
+
+  & svg path, line {
+    transition: stroke .2s;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--green-200);
+  }
+}
+
+.applause-button {
+  color: var(--gray-400);
+
+  &:hover {
+    color: var(--gray-100);
+
+    & svg path, line {
+      stroke: var(--gray-100);
+    }
+  }
+}
+
+.applause-button-clicked {
+  color: var(--green-200);
+
+  & svg path, line {
+    stroke: var(--green-200);
+  }
+}

@@ -1,0 +1,146 @@
+.container {
+  max-width: 52rem;
+  width: 100%;
+
+  padding: 2.5rem;
+
+  background-color: var(--gray-800);
+  border-radius: 8px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+
+  & span {
+    font-size: 0.875rem;
+    color: var(--gray-400);
+  }
+}
+
+.profile-data {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  & p {
+    font-weight: bold;
+    color: var(--gray-100);
+    margin-bottom: 0.5rem;
+  }
+
+  & span {
+    font-size: 0.875rem;
+    color: var(--gray-400);
+  }
+}
+
+.main {
+  & p {
+    color: var(--gray-300);
+    line-height: 1.625rem;
+    margin-bottom: 1.875rem;
+  }
+
+  & span {
+    display: flex;
+    gap: 0.3rem;
+  }
+
+  & a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--green-200);
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--green-200);
+      border-radius: 2px;
+    }
+  }
+}
+
+.separator {
+  display: block;
+  height: 1px;
+  margin: 1.5rem 0;
+  background-color: var(--gray-600);
+}
+
+.footer {
+  & section {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  & p {
+    font-weight: bold;
+    color: var(--gray-100);
+  }
+
+  & textarea {
+    height: 6rem;
+    resize: none;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--gray-900);
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: var(--gray-300);
+    padding: 1rem;
+    margin: 1rem 0;
+
+    &:focus-visible {
+      outline: 2px solid var(--green-200);
+    }
+  }
+
+  & button {
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 6.75rem;
+    height: 3.125rem;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--white);
+    background-color: var(--green-500);
+    cursor: pointer;
+
+    transition: background-color .2s, opacity .2s, max-height 0.3s;
+
+    &:hover {
+      background-color: var(--green-200);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--green-200);
+    }
+  }
+
+  &:focus-within button {
+    visibility: visible;
+    opacity: 1;
+    max-height: 15rem;
+  }
+}

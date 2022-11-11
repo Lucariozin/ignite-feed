@@ -1,0 +1,20 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  height: 5rem;
+  background-color: var(--gray-800);
+}
+
+.img {
+  height: 3.125rem;
+  user-select: none;
+}
+
+.text {
+  font-size: 1.375rem;
+  font-weight: bold;
+  color: var(--gray-100);
+}
